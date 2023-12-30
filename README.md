@@ -1,6 +1,6 @@
 # TopXLoadingScreen Documentation
 
-![TopXLoadingScreen](https://media.discordapp.net/attachments/969012113160933486/1190710201259655350/image.png?ex=65a2ca4a&is=6590554a&hm=e8b0cbdac0fa973493238502ed2f6014ee8d3891a1dab28537c63602f33affdc&=&format=webp&quality=lossless&width=981&height=554)
+![TopXLoadingScreen](https://cdn.discordapp.com/attachments/969012113160933486/1190725106792669274/Untitled-1.png?ex=65a2d82c&is=6590632c&hm=fc79d55bae982830cc9abe8f82da390c64270e1018376f46d8471ed9678bbc1d&)
 
 ### Thanks For Using Our Script ❤️
 
