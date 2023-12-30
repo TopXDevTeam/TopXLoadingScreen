@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>TopX Loading Screen</title>
+</head>
+
+<body>
+    <div id="bg-container"></div>
+
+    <div class="overlay">
+        <div id="particles-js"></div>
+        <div class="server-name"></div>
+        <img class="logo">
+        <img class="filled-logo">
+
+       
+        <div class="accounts"></div>
+
+        <div class="music-player">
+            <i class="music-toggle fa-solid fa-music"></i>
+            <div class="music-content">
+                <h5 class="music-title"></h5>
+                <div class="song-time">
+                    <p class="current-time"></p>
+                    <input class="music-length" type="range" min="0" max="100" value="0">
+                    <p class="song-duration"></p>
+                </div>
+                <div class="controles">
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-solid fa-play-pause"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+                <input type="range" class="volume-bar" min="0" max="100" value="0">
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="toggle-sidebar"><i class="fa-regular fa-bars-sort"></i></div>
+            <div class="sidebar-content">
+                <div class="change-log">
+                    <h2>Change Log</h2>
+                    <ul class="changelog-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loadingbar">
+        <div class="tips"></div>
+        <div class="loadcircle"></div>
+        <div class="loadbar">
+            <div class="bar"></div>
+        </div>
+    </div>
+    <audio autoplay="true">
+        <source class="audio-src">
+    </audio>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

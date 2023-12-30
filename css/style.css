@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    user-select: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+#bg-container {
+    position: absolute;
+    transition: all .3s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.server-name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    color: aliceblue;
+    font-size: 150px;
+    font-weight: 900;
+    opacity: .25;
+    line-height: 150px;
+    background: linear-gradient(to right, var(--themeColor), transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo {
+    position: absolute;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: grayscale(100%);
+}
+
+.filled-logo {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+.bgVideo {
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    transition: all .3s ease;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.loadingbar {
+    width: 90%;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    gap: 10px;
+}
+
+.loadcircle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: conic-gradient(#0000 10%, var(--themeColor));
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 5px), #000 0);
+    animation: loadcircle 0.75s infinite linear;
+}
+
+.loadbar {
+    width: 100%;
+    height: 10px;
+    background: rgba(50, 50, 50, 0.3);
+    border: 2px solid rgba(50, 50, 50, 0.8);
+    overflow: hidden;
+}
+
+.loadbar .bar {
+    height: 100%;
+    background: var(--themeColor);
+}
+
+.tips {
+    position: absolute;
+    top: -10px;
+    left: 5%;
+    transition: all .3s ease;
+    color: var(--FontColor);
+}
+
+.accounts {
+    position: absolute;
+    right: 30px;
+    bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.accounts a {
+    width: 40px;
+    height: 40px;
+    border: 2px var(--themeColor) solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--themeColor);
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all .3s ease;
+    box-shadow: 0 0 5px var(--themeColor);
+}
+
+.accounts a:hover {
+    transition: all .3s ease;
+    color: var(--FontColor);
+    background: var(--themeColor);
+    box-shadow: 0 0 30px var(--themeColor);
+
+}
+
+.music-player {
+    position: absolute;
+    right: 30px;
+    top: 5%;
+    gap: 2px;
+    width: 40px;
+    height: 40px;
+    border: 1px rgba(55, 55, 55, .2) solid;
+    background: rgba(255, 255, 255, .2);
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all .3s ease;
+}
+
+.fa-music {
+    color: var(--FontColor);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+}
+
+.fa-music:hover {
+    color: var(--themeColor);
+}
+
+.opened {
+    width: 350px;
+    height: 120px;
+}
+
+.music-content {
+    display: none;
+    padding: 15px;
+}
+
+.music-title {
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    color: var(--FontColor);
+}
+
+.controles {
+    color: var(--FontColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.controles i {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.controles i:hover {
+    color: var(--themeColor);
+}
+
+.song-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--FontColor);
+}
+
+.music-length {
+    width: 100%;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    height: 5px;
+    background: linear-gradient(to right, var(--themeColor) 0%, rgba(255, 255, 255, .2) 0%);
+    cursor: pointer;
+}
+
+.music-length::-webkit-slider-thumb,
+.volume-bar::-webkit-slider-thumb {
+    visibility: hidden;
+}
+
+.volume-bar {
+    position: absolute;
+    top: 33%;
+    left: -25%;
+    rotate: 270deg;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(to right, var(--themeColor) 0%, rgba(255, 255, 255, .2) 0%);
+    cursor: pointer;
+}
+
+.volume-bar::after {
+    content: '\f001';
+    opacity: .5;
+    font-family: 'Font Awesome 6 Pro';
+    position: absolute;
+    top: 50%;
+    font-weight: 900;
+    font-size: 18px;
+    transform: translate(-50%, 0);
+    right: 10px;
+    rotate: 90deg;
+    color: var(--FontColor);
+}
+
+.toggle-sidebar {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--themeColor);
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    color: var(--FontColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 1s ease;
+    opacity: .5;
+    box-shadow: 0 0 30px var(--themeColor);
+}
+
+.sidebar {
+    display: none;
+}
+
+.sidebar-content {
+    color: var(--FontColor);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(to right, var(--themeColor) -100%, rgba(255, 255, 255, .1) 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+    transition: all 1s ease;
+    padding: 50px;
+}
+
+
+.sidebar-content h2 {
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.change-log {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.change-log ul {
+    list-style: circle;
+}
+
+.change-log .new {
+    color: greenyellow;
+}
+
+.change-log .upcoming {
+    color: yellow;
+}
+
+.change-log .remove {
+    color: red;
+}
+
+
+@keyframes loadcircle {
+    to {
+        transform: rotate(360deg);
+    }
+}
